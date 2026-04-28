@@ -17,7 +17,7 @@ services:
       context: ./frontend
       dockerfile: Dockerfile.prod
     ports:
-      - "80:80"
+      - "3005:80"
     depends_on:
       - web
     # No volumes needed for production
