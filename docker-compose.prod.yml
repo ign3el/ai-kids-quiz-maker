@@ -1,0 +1,23 @@
+services:
+  web:
+    restart: always
+    build: .
+    # No ports exposed to host, only internal network
+    env_file:
+      - .env
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./uploads:/app/uploads
+      - ./outputs:/app/outputs
+
+  frontend:
+    restart: always
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile.prod
+    ports:
+      - "80:80"
+    depends_on:
+      - web
+    # No volumes needed for production

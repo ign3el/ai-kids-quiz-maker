@@ -3,7 +3,7 @@ import axios from 'axios';
 import { UploadCloud, FileType, X } from 'lucide-react';
 import './UploadScreen.css';
 
-const API_URL = "http://localhost:8000/api";
+const API_URL = "/api";
 
 const UploadScreen = ({ onStartLoading, onQuizGenerated, onCancelLoading }) => {
   const [files, setFiles] = useState([]);
