@@ -2,8 +2,8 @@
 
 # ================= CONFIGURATION =================
 # We use quotes here because of the space in the path
-PROJECT_NAME="ai-kids-quiz-maker"
-PROJECT_PATH="/www/wwwroot/ai-kids-quiz-maker"
+PROJECT_NAME="ai-kids-quiz"
+PROJECT_PATH="/www/wwwroot/ai-kids-quiz"
 LOG_FILE="$PROJECT_PATH/deploy.log"
 BRANCH="master"
 # =================================================
