@@ -29,7 +29,8 @@ echo "============================================================"
 
 # 2. FIX PERMISSIONS & GIT SAFETY
 echo "🔧 Fixing permissions and git safety..."
-git config --global --add safe.directory "$PROJECT_PATH"
+export HOME="$PROJECT_PATH"
+git config --add safe.directory "$PROJECT_PATH"
 
 if [ -d "$PROJECT_PATH" ]; then
     cd "$PROJECT_PATH"
