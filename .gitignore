@@ -1,0 +1,26 @@
+# Environment
+.env
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+.eslintcache
+
+# Project specific
+uploads/
+outputs/
+
+# IDEs
+.vscode/
+.idea/

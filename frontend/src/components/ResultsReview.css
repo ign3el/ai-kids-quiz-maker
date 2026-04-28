@@ -1,0 +1,203 @@
+.results-review-container {
+  padding-bottom: 4rem;
+}
+
+.summary-card {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 3rem 2rem;
+}
+
+.score-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.score-text {
+  font-size: 5rem;
+  font-weight: 800;
+  margin-top: 10px;
+  background: linear-gradient(135deg, var(--accent), var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.result-message {
+  font-size: 1.8rem;
+  margin-bottom: 2.5rem;
+}
+
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.review-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.review-card {
+  padding: 1.5rem;
+  border-left: 5px solid transparent;
+}
+
+.review-card.border-success {
+  border-left-color: var(--success);
+}
+
+.review-card.border-error {
+  border-left-color: var(--error);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.q-num {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.status-badge.success {
+  background: rgba(46, 204, 113, 0.2);
+  color: var(--success);
+}
+
+.status-badge.error {
+  background: rgba(231, 76, 60, 0.2);
+  color: var(--error);
+}
+
+.q-text {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.answer-comparison {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.ans-box {
+  padding: 12px;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.2);
+}
+
+.ans-box.yours {
+  border-left: 3px solid var(--text-muted);
+}
+
+.ans-box.correct {
+  border-left: 3px solid var(--success);
+  background: rgba(46, 204, 113, 0.05);
+}
+
+.label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ans-box p {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.explanation-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.explanation-box strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--accent);
+}
+
+.text-success { color: var(--success); }
+.text-primary { color: var(--primary); }
+
+/* --- PDF Export Styles --- */
+/* These styles apply only to the hidden div that gets converted to PDF */
+.pdf-content {
+  color: #000;
+  background: #fff;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+}
+
+.pdf-header {
+  border-bottom: 2px solid #000;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.pdf-header h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.pdf-meta {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.pdf-question-block {
+  margin-bottom: 30px;
+  page-break-inside: avoid;
+}
+
+.pdf-question-block h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.pdf-options {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.pdf-options li {
+  margin-bottom: 5px;
+}
+
+.pdf-text-answer {
+  margin-bottom: 10px;
+}
+
+.pdf-explanation {
+  background: #f0f0f0;
+  padding: 10px;
+  border-left: 4px solid #4CAF50;
+  font-size: 14px;
+}

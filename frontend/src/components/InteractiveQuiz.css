@@ -1,0 +1,143 @@
+.interactive-quiz {
+  padding: 2.5rem;
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.quiz-title {
+  color: var(--secondary);
+  font-size: 1.4rem;
+}
+
+.progress-indicator {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.question-container {
+  margin-bottom: 2.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  border-radius: 16px;
+  border-left: 4px solid var(--primary);
+}
+
+.question-text {
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+
+.option-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  color: var(--text);
+  padding: 16px 20px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-family: 'Outfit', sans-serif;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.option-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateX(5px);
+}
+
+.option-btn.selected {
+  border-color: var(--secondary);
+  background: rgba(78, 205, 196, 0.1);
+}
+
+.option-btn.correct {
+  background: rgba(46, 204, 113, 0.2);
+  border-color: var(--success);
+}
+
+.option-btn.wrong {
+  background: rgba(231, 76, 60, 0.2);
+  border-color: var(--error);
+}
+
+.icon-right {
+  color: var(--success);
+}
+
+.icon-wrong {
+  color: var(--error);
+}
+
+.feedback-box {
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.feedback-box.success {
+  background: rgba(46, 204, 113, 0.1);
+  border: 1px solid var(--success);
+}
+
+.feedback-box.error {
+  background: rgba(231, 76, 60, 0.1);
+  border: 1px solid var(--error);
+}
+
+.feedback-box.info {
+  background: rgba(78, 205, 196, 0.1);
+  border: 1px solid var(--secondary);
+}
+
+.feedback-box h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.explanation {
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.action-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.check-btn, .next-btn {
+  padding: 14px 32px;
+  font-size: 1.2rem;
+}
+
+.check-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.answer-textarea {
+  min-height: 120px;
+  resize: vertical;
+  margin-bottom: 1rem;
+}
