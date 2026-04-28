@@ -38,7 +38,7 @@ else
     exit 1
 fi
 
-git config --add safe.directory "$PROJECT_PATH"
+git config --global --add safe.directory "$PROJECT_PATH"
 
 # Ensure www user owns the project files
 chown -R www:www "$PROJECT_PATH"
