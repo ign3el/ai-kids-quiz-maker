@@ -30,7 +30,6 @@ echo "============================================================"
 # 2. FIX PERMISSIONS & GIT SAFETY
 echo "🔧 Fixing permissions and git safety..."
 export HOME="$PROJECT_PATH"
-git config --add safe.directory "$PROJECT_PATH"
 
 if [ -d "$PROJECT_PATH" ]; then
     cd "$PROJECT_PATH"
@@ -38,6 +37,8 @@ else
     echo "❌ ERROR: Directory $PROJECT_PATH not found!"
     exit 1
 fi
+
+git config --add safe.directory "$PROJECT_PATH"
 
 # Ensure www user owns the project files
 chown -R www:www "$PROJECT_PATH"
