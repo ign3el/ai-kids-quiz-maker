@@ -68,6 +68,11 @@ const ResultsReview = ({ quizData, userAnswers, score, onRetake, onStartOver }) 
           <div className="pdf-questions">
             {quizData.questions.map((q, i) => (
               <div key={i} className="pdf-question-block">
+                {q.context && (
+                  <div className="pdf-context" style={{ fontStyle: 'italic', color: '#666', marginBottom: '5px' }}>
+                    {q.context}
+                  </div>
+                )}
                 <h3>Q{i+1}: {q.question}</h3>
                 
                 {q.options && q.options.length > 0 ? (
@@ -110,6 +115,11 @@ const ResultsReview = ({ quizData, userAnswers, score, onRetake, onStartOver }) 
                   </span>
                 </div>
                 
+                {q.context && (
+                  <div className="review-context" style={{ fontSize: '0.9rem', opacity: 0.8, fontStyle: 'italic', marginBottom: '0.5rem', padding: '0.5rem', background: 'rgba(255,255,255,0.05)', borderRadius: '4px' }}>
+                    {q.context}
+                  </div>
+                )}
                 <h4 className="q-text">{q.question}</h4>
                 
                 <div className="answer-comparison">

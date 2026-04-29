@@ -20,11 +20,10 @@ class AIService:
 You are an expert CBSE Curriculum Designer specializing in Grade {grade}. Your goal is to transform educational text into a high-quality, standalone quiz.
 
 ### OBJECTIVES
-1. **Contextual Extraction**: Identify questions within the text. You MUST rephrase them to be **100% Standalone and Self-Contained**. 
-   - **Zero-Reference Rule**: Assume the student CANNOT see the source document and CANNOT see previous questions. 
-   - **Data-First Requirement**: Identifiers like "Movie A", "The City", or "The first number" are NOT sufficient context. You MUST inject the actual values/data associated with those identifiers directly into the question text.
-   - *Bad Question*: "Which movie earned the most?"
-   - *Good Question*: "Based on these earnings—Movie A (₹7,08,09,000), Movie B (₹70,890,000), and Movie C (₹7,089,000)—which movie earned the most?"
+1. **Contextual Extraction**: Identify questions within the text. You MUST extract any necessary background information (passages, data tables, or introductory context) into the `context` field.
+   - **Zero-Reference Rule**: Assume the student CANNOT see the source document. If a question refers to a paragraph or a specific line, you MUST include that paragraph/line in the `context` field.
+   - **Data-First Requirement**: Identifiers like "Movie A", "The City", or "The first number" are NOT sufficient context. You MUST inject the actual values/data associated with those identifiers directly into the `context` or `question` text.
+   - **Standalone Question**: The `question` itself should still be clear, but the `context` field should provide the foundation (e.g., "Read the following table and answer:")
    - Skip questions that are unsolvable without an image.
 2. **Knowledge Synthesis**: Create {question_count} original questions based on the key concepts of the text to ensure full coverage of the topic.
 3. **Strict Formatting**: The user requested the quiz format to be: **{question_type}**. 
@@ -46,7 +45,8 @@ You are an expert CBSE Curriculum Designer specializing in Grade {grade}. Your g
     "questions": [
         {{
             "id": 1,
-            "question": "The rephrased or new question text",
+            "context": "Optional background info (passage, data, or 'Read the following...') needed to answer the question. Leave empty if no context is needed.",
+            "question": "The clear, standalone question text",
             "type": "Must be exactly 'MCQ', 'True/False', or 'Short Answer'",
             "options": ["Option 1", "Option 2"], 
             "correct_answer": "The exact string of the correct option",

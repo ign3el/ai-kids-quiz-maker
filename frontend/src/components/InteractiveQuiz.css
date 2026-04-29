@@ -24,6 +24,28 @@
   font-size: 0.9rem;
 }
 
+.context-box {
+  margin-bottom: 1.5rem;
+  background: rgba(78, 205, 196, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px dashed var(--secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  white-space: pre-wrap; /* Preserve formatting from AI */
+}
+
+.context-label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
 .question-container {
   margin-bottom: 2.5rem;
   background: rgba(0, 0, 0, 0.2);

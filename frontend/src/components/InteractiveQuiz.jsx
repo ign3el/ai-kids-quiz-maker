@@ -64,6 +64,13 @@ const InteractiveQuiz = ({ quizData, onComplete }) => {
         </div>
       </div>
 
+      {currentQuestion.context && (
+        <div className="context-box animate-float">
+          <span className="context-label">Background Context</span>
+          {currentQuestion.context}
+        </div>
+      )}
+
       <div className="question-container animate-float">
         <h2 className="question-text">{currentQuestion.question}</h2>
       </div>
